@@ -1,5 +1,6 @@
 package util;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import pages.*;
 import io.appium.java_client.android.AndroidDriver;
@@ -81,4 +82,9 @@ public class DriverSetup extends ConfigReader {
         basePage = new BasePage(driver);
         filterPage = new FilterPage(driver);
     }
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
+        driver.quit();
+    }
+
 }
