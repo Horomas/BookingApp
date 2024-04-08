@@ -28,35 +28,16 @@ public class AcceptNotificationsPage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-//    public boolean notificationsPageLoaded() {
-//        return new WebDriverWait(driver, GlobalVariables.globalTimeout).until(ExpectedConditions.visibilityOf(acceptNotificationsButton)).isDisplayed();
-//    }
-//
-//    public boolean notificationsPageLoaded() {
-//        try {
-//            // Attempt to wait for the visibility of the allowNotificationsPopUpButton and check if it is displayed
-//            return new WebDriverWait(driver, GlobalVariables.globalTimeout)
-//                    .until(ExpectedConditions.visibilityOf(acceptNotificationsButton))
-//                    .isDisplayed();
-//        } catch (NoSuchElementException e) {
-//            // Handle the case where the allowNotificationsPopUpButton is not found
-//            System.out.println("The notifications popup button was not found: " + e.getMessage());
-//            return false;
-//        }
-//    }
     @Step("Notifications page is loaded")
     public boolean notificationsPageLoaded() {
         try {
-            // Attempt to wait for the visibility of the allowNotificationsPopUpButton and check if it is displayed
             return new WebDriverWait(driver, GlobalVariables.globalTimeout)
                     .until(ExpectedConditions.visibilityOf(acceptNotificationsButton))
                     .isDisplayed();
         } catch (TimeoutException e) {
-            // Handle the case where the element is not found within the timeout period
             System.out.println("The notifications popup button was not found within the timeout period: " + e.getMessage());
             return false;
         } catch (NoSuchElementException e) {
-            // Handle the case where the allowNotificationsPopUpButton is not found at all
             System.out.println("The notifications popup button was not found: " + e.getMessage());
             return false;
         }
@@ -64,16 +45,13 @@ public class AcceptNotificationsPage {
     @Step("Notifications popup is loaded")
     public boolean notificationsPopupButtonLoaded() {
         try {
-            // Attempt to wait for the visibility of the allowNotificationsPopUpButton and check if it is displayed
             return new WebDriverWait(driver, GlobalVariables.globalTimeout)
                     .until(ExpectedConditions.visibilityOf(allowNotificationsPopUpButton))
                     .isDisplayed();
         } catch (TimeoutException e) {
-            // Handle the case where the element is not found within the timeout period
             System.out.println("The notifications popup button was not found within the timeout period: " + e.getMessage());
             return false;
         } catch (NoSuchElementException e) {
-            // Handle the case where the allowNotificationsPopUpButton is not found at all
             System.out.println("The notifications popup button was not found: " + e.getMessage());
             return false;
         }

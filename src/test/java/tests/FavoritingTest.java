@@ -13,7 +13,7 @@ public class FavoritingTest extends DriverSetup {
 
 
     @Severity(SeverityLevel.CRITICAL)
-    @Description("Test Description: Verify that the location can be favoriting and that the currency is changed")
+    @Description("Test Description: Verify that the location can be favorited and that the currency is changed")
     @Test(testName = "Favoriting test")
     public void bookingTest1() {
 
@@ -43,7 +43,6 @@ public class FavoritingTest extends DriverSetup {
 
         Assert.assertTrue(basePage.backButtonLoaded(), "Login skip button is not loaded");
         basePage.clickBackButton();
-
         Assert.assertTrue(tripInformationEntryPage.tripInformationEntryPageLoaded(), "Trip information entry page is not loaded");
         tripInformationEntryPage.clickDestinationField();
         Assert.assertTrue(tripInformationEntryPage.enterDestination(), "Trip information entry field is not loaded");
