@@ -16,27 +16,27 @@ public class CarRentalTest extends DriverSetup {
     public void bookingTest2() {
         Assert.assertTrue(cookiePage.cookiePageLoaded(), "Cookie page is not loaded");                                                          //1. Start the Booking application and continue without sign in.
         cookiePage.clickAcceptCookieButton();
-        try {
-            // Attempt to assert that the notifications page is loaded
-            Assert.assertTrue(acceptNotificationsPage.notificationsPageLoaded(), "Notifications page is not loaded");
-            // If the assertion passes, click the accept notifications button
-            acceptNotificationsPage.clickAcceptNotificationsButton();
-        } catch (AssertionError e) {
-            // Handle the assertion error if the notifications page is not loaded
-            System.out.println("Assertion failed: " + e.getMessage());
-            // Optionally, rethrow the exception or perform other actions
-        }
-
-        try {
-            // Attempt to assert that the notifications popup button is loaded
-            Assert.assertTrue(acceptNotificationsPage.notificationsPopupButtonLoaded(), "Notifications pop-up page is not loaded");
-            // If the assertion passes, click the allow notifications popup button
-            acceptNotificationsPage.clickAllowNotificationsPopUpButton();
-        } catch (AssertionError e) {
-            // Handle the assertion error if the notifications popup button is not loaded
-            System.out.println("Assertion failed: " + e.getMessage());
-            // Optionally, rethrow the exception or perform other actions
-        }
+//        try {
+//            // Attempt to assert that the notifications page is loaded
+//            Assert.assertTrue(acceptNotificationsPage.notificationsPageLoaded(), "Notifications page is not loaded");
+//            // If the assertion passes, click the accept notifications button
+//            acceptNotificationsPage.clickAcceptNotificationsButton();
+//        } catch (AssertionError e) {
+//            // Handle the assertion error if the notifications page is not loaded
+//            System.out.println("Assertion failed: " + e.getMessage());
+//            // Optionally, rethrow the exception or perform other actions
+//        }
+//
+//        try {
+//            // Attempt to assert that the notifications popup button is loaded
+//            Assert.assertTrue(acceptNotificationsPage.notificationsPopupButtonLoaded(), "Notifications pop-up page is not loaded");
+//            // If the assertion passes, click the allow notifications popup button
+//            acceptNotificationsPage.clickAllowNotificationsPopUpButton();
+//        } catch (AssertionError e) {
+//            // Handle the assertion error if the notifications popup button is not loaded
+//            System.out.println("Assertion failed: " + e.getMessage());
+//            // Optionally, rethrow the exception or perform other actions
+//        }
         Assert.assertTrue(basePage.backButtonLoaded(), "Login skip button is not loaded");
         basePage.clickBackButton();
         Assert.assertTrue(basePage.signInSectionButtonLoaded(), "Sign in section button is not loaded");                            //2. Navigate to Sign in tab.
