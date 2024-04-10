@@ -28,7 +28,6 @@ public class DriverSetup extends ConfigReader {
 
     protected CookiePage cookiePage;
     protected AcceptNotificationsPage acceptNotificationsPage;
-    protected pages.LoginPage loginPage;
     protected TripInformationEntryPage tripInformationEntryPage;
     protected SearchResultsPage searchResultsPage;
     protected SavedPage savedPage;

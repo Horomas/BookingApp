@@ -19,10 +19,6 @@ public class MyNextTripPage {
     @AndroidFindBy(accessibility = "Remove property from list")
     private RemoteWebElement removeFavourite;
 
-
-    //    @AndroidFindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.view.View[5]/android.widget.TextView[1]")
-    //    private RemoteWebElement nameOfFirstFavourite;
-
     @FindAll({
             @FindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.view.View[5]/android.widget.TextView[1]"),
             @FindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[5]/android.widget.TextView[1]"),
